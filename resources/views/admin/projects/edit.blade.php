@@ -75,7 +75,7 @@
         <div class="mb-3">
           <label for="type_id" class="form-label">Seleziona workflow</label>
           <select name="type_id" id="type_id" class="form-control @error('type_id') is-invalid @enderror">
-            <option value="">Seleziona workflow</option>
+            
             @foreach ($types as $type)
                 <option value="{{$type->id}}" {{ $type->id == old('type_id') ? 'selected' : '' }}>{{$type->workflow}}</option>
             @endforeach
