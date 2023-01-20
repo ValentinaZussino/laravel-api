@@ -27,7 +27,7 @@ class StoreProjectRequest extends FormRequest
             'title' =>'required|unique:projects|max:100|min:3',
 	        'description' => 'nullable',
             'framework' => 'nullable',
-            'difficulty' => 'nullable',
+            'difficulty' => 'nullable|integer|between:1,10',
             'team' => 'nullable',
             'git_link' => 'nullable',
             'cover_image' => 'nullable|image|max:1000',
